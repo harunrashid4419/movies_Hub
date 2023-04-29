@@ -3,14 +3,20 @@ import { useLoaderData } from "react-router-dom";
 import "./SingleMovie.css";
 import { FaCalendarAlt, FaPlay, FaShareAlt, FaStopwatch } from "react-icons/fa";
 import { BiDownload } from "react-icons/bi";
-import { Link } from "react-router-dom";
 
 const SingleMovie = () => {
   const movie: any = useLoaderData();
   const { name, poster, year, genra, language, length, plot, print } = movie;
 
   return (
-    <div className="container">
+    <div
+      // style={{
+      //   opacity: "100%",
+      //   backgroundPosition: "cover",
+      //   backgroundImage: `url(${poster})`,
+      // }}
+      className="container"
+    >
       <div className="movie_details">
         <div className="img">
           <img src={poster} alt="movie-poster" />

@@ -1,0 +1,24 @@
+.all_movies{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.all_movies h1{
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    color: beige;
+    font-weight: bold;
+}
+.all_movies svg{
+    font-size: 32px;
+    color: beige;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .all_movies{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}

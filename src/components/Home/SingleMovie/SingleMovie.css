@@ -6,6 +6,9 @@
 .movie_details .img{
     width: 30%;
 }
+.movie_details .img img{
+    width: 100%;
+}
 .movie_details .details-content{
     width: 70%;
     padding-left: 40px;

@@ -4,6 +4,7 @@ import Movies from "../Movies/Movies";
 import TopRated from "../TopRated/TopRated";
 import { MdLocalMovies } from "react-icons/md";
 import './Home.css';
+import MobileOffline from "../MobileOffline/MobileOffline";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       </div>
       <TopRated />
       <Movies />
+      <MobileOffline />
     </div>
   );
 };

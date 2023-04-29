@@ -5,7 +5,7 @@ const Navbar = () => {
   const menu = (
     <li>
       <Link className='hover:text-red-500' to='/'>Home</Link>
-      <Link className='hover:text-red-500' to='/movie'>Movies</Link>
+      <Link className='hover:text-red-500' to='/movies'>Movies</Link>
       <Link className='hover:text-red-500' to='/movies'>Request Movie</Link>
     </li>
   )
