@@ -5,12 +5,12 @@ const Navbar = () => {
   const menu = (
     <li>
       <Link className='hover:text-red-500' to='/'>Home</Link>
-      <Link className='hover:text-red-500' to='/movies'>Movies</Link>
+      <Link className='hover:text-red-500' to='/movie'>Movies</Link>
       <Link className='hover:text-red-500' to='/movies'>Request Movie</Link>
     </li>
   )
     return (
-      <div className='bg-black text-white'>
+      <div className='bg-black text-white shadow-md'>
         <div className="navbar flex justify-between container">
         <div className="navbar-start">
           <div className="dropdown">

@@ -1,0 +1,17 @@
+.movies-top-rated{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.movies-top-rated h1 {
+    font-size: 32px;
+    color: beige;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.movies-top-rated svg {
+    font-size: 32px;
+    color: beige;
+    margin-top: 5px;
+}

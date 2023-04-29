@@ -1,7 +1,13 @@
+.footer{
+    background-color: black;
+
+}
 .footer-section{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    padding-top: 60px;
+    padding-bottom: 20px;
 }
 .footer-section .flex-column h1{
     font-size: 32px;
@@ -26,6 +32,12 @@
 .footer-section .flex-column span{
     font-weight: bold;
     color: #E0D5D5;
+}
+.socket{
+    color: #E0D5D5;
+    text-align: center;
+    padding-bottom: 15px;
+    background-color: black;
 }
 @media screen and (max-width: 767px) {
     .footer-section{

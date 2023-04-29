@@ -1,0 +1,145 @@
+.movie_details{
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+.movie_details .img{
+    width: 30%;
+}
+.movie_details .details-content{
+    width: 70%;
+    padding-left: 40px;
+}
+.movie_details .details-content h1{
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+.movie_details .details-content .details span {
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    padding: 1px 14px;
+    margin-right: 15px;
+}
+.movie_details .details-content .details{
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+.movie_details .details-content .details p {
+    font-size: 16px;
+    color: #e0d5d5;
+}
+.movie_details .details-content .details .year{
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+.movie_details .details-content .details .time{
+    display: flex;
+    align-items: center;
+}
+.movie_details .details-content .details .icon{
+    color: #ff00008c;
+    margin-right: 5px;
+}
+.movie_details .details-content .plot{
+    color: #c0c0c0;
+    font-size: 18px;
+    padding: 15px 0;
+}
+.movie_details .details-content .other {
+    display: flex;
+    align-items: center;
+    background: #00000036;
+    width: fit-content;
+    padding: 20px 50px;
+    border: 1px solid #ffffff4f;
+    border-radius: 16px;
+    margin: 30px 0;
+}
+.movie_details .details-content .other .share{
+    font-size: 22px;
+    background: #080a1a;
+    width: 40px;
+    height: 35px;
+    padding: 9px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+.movie_details .details-content .other .language{
+    font-size: 18px;
+    color: #c0c0c0;
+    margin: 0 35px;
+}
+.movie_details .details-content .other .button {
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+    color: white;
+    border-radius: 26px;
+    padding: 9px 40px;
+    transition: .5s;
+}
+.movie_details .details-content .other .button:hover{
+    background-color: red;
+}
+.movie_details .details-content .other .button svg{
+    color: white;
+    margin-right: 10px;
+}
+.movie_details .details-content .download-btn {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    background: #F20000;
+    color: white;
+    padding: 14px 55px;
+    border-radius: 5px;
+    border: 2px solid #F20000;
+    transition: .5s;
+}
+.movie_details .details-content .download-btn:hover{
+    border: 2px solid #F20000;
+    background: transparent;
+}
+.movie_details .details-content .download-btn svg {
+    font-size: 19px;
+    margin-left: 3px;
+    transform: rotate(-90deg);
+    margin-top: 2px;
+}
+@media screen and (max-width: 1024px) {
+    .movie_details{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .movie_details .details-content {
+        width: 100%;
+        padding-left: 0px;
+    }
+    .movie_details .img {
+        width: 100%;
+        padding-top: 50px;
+    }
+    .movie_details .img img{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .movie_details .details-content .other {
+        padding: 20px 10px;
+    }
+    .movie_details .details-content .other .language {
+        font-size: 16px;
+        margin: 0 13px;
+    }
+    .movie_details .details-content .other .button {
+        padding: 9px 25px;
+    }
+    .movie_details .details-content h1 {
+        font-size: 35px;
+    }
+}

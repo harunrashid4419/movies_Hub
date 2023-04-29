@@ -3,15 +3,6 @@
     height: 400px;
     position: relative;
 }
-.movies_banner img::before {
-    content: '';
-    position: absolute;
-    background: black;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
 .movies_banner .content{
     position: absolute;
     top: 50%;
@@ -61,7 +52,15 @@
     background-color: red;
     color: white;
 }
-
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    display: none;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    display: none;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    display: none;
+}
 @media screen and (max-width: 767px) {
     .movies_banner img{
         height: 300px;
