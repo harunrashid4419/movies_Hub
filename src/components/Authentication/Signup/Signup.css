@@ -1,0 +1,87 @@
+.singup-section{
+    width: 70%;
+    margin: 50px auto;
+    padding: 50px;
+    border: 1px solid;
+    background-color: #0B0F29;
+}
+.singup-section h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: antiquewhite;
+    margin-bottom: 20px;
+}
+.singup-section .input-type span {
+    font-size: 16px;
+    color: #4b5563;
+    font-weight: bold;
+}
+.singup-section .input-type input {
+    background-color: #080A1A;
+    border: 1px solid;
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.singup-section button{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 100%;
+    padding: 12px 0;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: .5s;
+}
+.singup-section button:hover{
+    border: 1px solid red;
+    background-color: transparent;
+}
+.singup-section .icon{
+    font-size: 22px;
+    margin-right: 20px;
+    transform: rotate(-90deg);
+}
+/* .singup-section .google-icon{
+    display: flex;
+    justify-content: center;
+}
+.singup-section .google {
+    font-size: 50px;
+    background: #4ba2e4;
+    padding: 11px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+} */
+.singup-section p{
+    text-align: center;
+    font-size: 18px;
+    color: #4b5563;
+    margin-top: 9px;
+}
+.singup-section a{
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+.singup-section .forget-pass{
+    text-align: right;
+    color: #4b5563;
+    font-size: 16px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+    .singup-section{
+        width: 100%;
+    }
+}

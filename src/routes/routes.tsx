@@ -4,6 +4,8 @@ import Main from '../Layout/Main';
 import Movies from '../components/Home/Movies/Movies';
 import SingleMovie from '../components/Home/SingleMovie/SingleMovie';
 import AllMovies from '../components/AllMoviesPage/AllMovies/AllMovies';
+import Signup from '../components/Authentication/Signup/Signup';
+import Login from '../components/Authentication/Login/Login';
 
 const routes = createBrowserRouter([
     {
@@ -24,6 +26,14 @@ const routes = createBrowserRouter([
                 path: '/movies',
                 element: <AllMovies />,
                 loader: async () => fetch('http://localhost:5000/allMovies'),
+            },
+            {
+                path: '/signup',
+                element: <Signup />
+            },
+            {
+                path: '/login',
+                element: <Login />
             }
         ]
     }
