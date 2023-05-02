@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../UserContext/UserContext";
+import { toast } from "react-hot-toast";
 
 const Navbar = () => {
+  const { user, logOut }: any = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        toast.success("LogOut successfull");
+      })
+      .catch(() => {});
+  };
+  
   const menu = (
     <li>
       <NavLink
@@ -22,17 +34,23 @@ const Navbar = () => {
       <NavLink
         style={{ textDecoration: "none" }}
         className={({ isActive }) => (isActive ? "text-red-500" : "underline")}
-        to="/movie"
+        to="/a"
       >
         Request Movie
       </NavLink>
-      <NavLink
-        style={{ textDecoration: "none" }}
-        className={({ isActive }) => (isActive ? "text-red-500" : "underline")}
-        to="/login"
-      >
-        Login
-      </NavLink>
+      {!user ? (
+        <NavLink
+          style={{ textDecoration: "none" }}
+          className={({ isActive }) =>
+            isActive ? "text-red-500" : "underline"
+          }
+          to="/login"
+        >
+          Login
+        </NavLink>
+      ) : (
+        <p onClick={handleLogOut}>LogOut</p>
+      )}
     </li>
   );
   return (

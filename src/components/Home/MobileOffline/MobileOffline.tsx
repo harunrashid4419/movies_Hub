@@ -9,7 +9,7 @@ const MobileOffline = () => {
       <div className="mobile-offline">
         <div className="content">
           <h1>Download Your Movies Watch Offline.</h1>
-          <h1>Enjoy On Your Mobile App</h1>
+          <h1>Enjoy On Your Mobile App.</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit
             perspiciatis ducimus id reiciendis a reprehenderit exercitationem,

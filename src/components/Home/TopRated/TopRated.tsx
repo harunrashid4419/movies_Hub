@@ -10,7 +10,7 @@ import "./TopRated.css";
 const TopRated = () => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
-    const url = "http://localhost:5000/movies";
+    const url = "https://movie-hub-server.vercel.app/movies";
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMovies(data));

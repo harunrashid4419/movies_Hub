@@ -1,0 +1,138 @@
+.movie_review h1{
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    color: #f5f5dc;
+}
+.movie_review svg{
+    margin-right: 15px;
+}
+.movie_review .review-section{
+    background-color: #0B0F29;
+    padding: 40px;
+    margin: 30px 0;
+    display: flex;
+}
+.movie_review .review-section .add-review{
+    width: 40%;
+}
+.movie_review .review-section .show-review{
+    width: 60%;
+    padding-left: 50px;
+}
+.movie_review .review-section h1{
+    color: #c0c0c0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.movie_review .review-section p {
+	color: #ffffff91;
+	font-size: 16px;
+	margin-top: 20px;
+	margin-bottom: 8px;
+}
+.movie_review .review-section input {
+    background-color: #080A1A;
+    border: 1px solid;
+    width: 100%;
+    padding: 12px 10px 10px 10px;
+    border-radius: 5px;
+}
+.movie_review .review-section textarea {
+    background: #080A1A;
+    border: 1px solid;
+    width: 100%;
+    padding:  10px 10px 60px 10px;
+    border-radius: 5px;
+}
+.movie_review .review-section .submit-btn {
+    background: red;
+    color: white;
+    border: 2px solid red;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .5s;
+}
+.movie_review .review-section .submit-btn:hover{
+    background-color: transparent;
+    border: 2px solid red;
+}
+.movie_review .review-section .user-review {
+    background-color: #080A1A;
+    padding: 30px;
+    margin-top: 30px;
+    height: 475px;
+    overflow-y: scroll;
+}
+.movie_review .review-section .user-review .user_info{
+    position: relative;
+    padding-right: 10px;
+}
+.movie_review .review-section .user-review .user_info::after {
+    content: '';
+    position: absolute;
+    background: #ffffff54;
+    height: 100%;
+    width: 1px;
+    top: 0;
+    right: 0;
+}
+.movie_review .review-section .user-review .review {
+    display: flex;
+    align-items: center;
+    background: #69696970;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.movie_review .review-section .user-review .review h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.movie_review .review-section .user-review .review h5{
+    font-size: 14px;
+    color: #c0c0c0;
+    margin: 10px 0;
+}
+.movie_review .review-section .user-review .review h4{
+    font-size: 16px;
+    color: #c0c0c0;
+    padding-left: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+    .movie_review .review-section {
+        display: block;
+    }
+    .movie_review .review-section .add-review {
+        width: 100%;
+    }
+    .movie_review .review-section .show-review {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .movie_review .review-section .user-review .review {
+        display: block;
+    }
+    .movie_review .review-section .user-review .user_info::after {
+        display: none;
+    }
+    .movie_review .review-section .user-review .review h4 {
+        padding-left: 0px;
+    }
+    .movie_review .review-section {
+        padding: 20px 10px;
+    }
+    .movie_review .review-section .user-review {
+        background-color: #080A1A;
+        padding: 10px;
+        margin-top: 30px;
+        height: 475px;
+        overflow-y: scroll;
+    }
+}

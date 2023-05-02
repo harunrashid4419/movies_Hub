@@ -1,7 +1,6 @@
 import {createBrowserRouter} from 'react-router-dom';
 import Home from '../components/Home/Home/Home';
 import Main from '../Layout/Main';
-import Movies from '../components/Home/Movies/Movies';
 import SingleMovie from '../components/Home/SingleMovie/SingleMovie';
 import AllMovies from '../components/AllMoviesPage/AllMovies/AllMovies';
 import Signup from '../components/Authentication/Signup/Signup';
@@ -15,17 +14,17 @@ const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />,
-                loader: async () => fetch('http://localhost:5000/movies')
+                loader: async () => fetch('https://movie-hub-server.vercel.app/movies')
             },
             {
                 path: '/movie/:id',
-                loader: ({params}) => fetch(`http://localhost:5000/movie/${params.id}`),
+                loader: ({params}) => fetch(`https://movie-hub-server.vercel.app/movie/${params.id}`),
                 element: <SingleMovie />
             },
             {
                 path: '/movies',
                 element: <AllMovies />,
-                loader: async () => fetch('http://localhost:5000/allMovies'),
+                loader: async () => fetch('https://movie-hub-server.vercel.app/allMovies'),
             },
             {
                 path: '/signup',
