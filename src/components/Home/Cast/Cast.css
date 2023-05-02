@@ -1,0 +1,32 @@
+.main-cast h1{
+    display: flex;
+    font-size: 32px;
+    align-items: center;
+    color: #f5f5dc;
+    font-weight: bold;
+}
+.main-cast svg{
+    margin-right: 20px;
+}
+.cast-sections {
+    background-color: #080A1A;
+    margin: 20px 0 40px 0;
+}
+.cast-sections .cast-img{
+    border: 1px solid;
+}
+.cast-sections .cast-img img{
+    width: 100%;
+    height: 300px;
+}
+.cast-sections .cast-img p{
+    font-size: 14px;
+    text-align: center;
+    margin: 5px 0;
+    color: white;
+}
+@media screen and (max-width: 576px) {
+    .cast-sections .cast-img img {
+        height: 250px;
+    }
+}

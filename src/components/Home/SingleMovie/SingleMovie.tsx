@@ -4,10 +4,12 @@ import "./SingleMovie.css";
 import { FaCalendarAlt, FaPlay, FaShareAlt, FaStopwatch } from "react-icons/fa";
 import { BiDownload } from "react-icons/bi";
 import MovieReview from "../MovieReview/MovieReview";
+import Cast from "../Cast/Cast";
 
 const SingleMovie = () => {
   const movie: any = useLoaderData();
-  const { name, poster, year, genra, language, length, plot, print, _id } = movie;
+  const { name, poster, year, genra, language, length, plot, print, _id } =
+    movie;
 
   return (
     <div
@@ -55,6 +57,7 @@ const SingleMovie = () => {
           </a>
         </div>
       </div>
+      <Cast movie={movie} />
       <MovieReview _id={_id} name={name} />
     </div>
   );
