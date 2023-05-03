@@ -1,14 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BiDownload } from "react-icons/bi";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../UserContext/UserContext";
 import { toast } from "react-hot-toast";
 
 const Login = () => {
-  const { login }: any = useContext(AuthContext);
+  const { login, user }: any = useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
-  
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
   const handleLogin = (e: any) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -21,13 +23,18 @@ const Login = () => {
         console.log(user);
         setError("");
         toast.success("Login Successfull");
-        navigate("/");
       })
       .catch((error: any) => {
         console.error(error.message);
         setError(error.message);
       });
   };
+
+  useEffect(() => {
+    if (user && user?.email) {
+      navigate(from, { replace: true });
+    }
+  }, [from, navigate, user]);
 
   return (
     <div className="container">

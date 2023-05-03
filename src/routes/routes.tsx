@@ -5,6 +5,8 @@ import SingleMovie from '../components/Home/SingleMovie/SingleMovie';
 import AllMovies from '../components/AllMoviesPage/AllMovies/AllMovies';
 import Signup from '../components/Authentication/Signup/Signup';
 import Login from '../components/Authentication/Login/Login';
+import RequestMovies from '../components/AllMoviesPage/RequestMovies/RequestMovies';
+import PrivateRoutes from './PrivateRoutes';
 
 const routes = createBrowserRouter([
     {
@@ -33,6 +35,10 @@ const routes = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login />
+            },
+            {
+                path: '/movieRequest',
+                element: <PrivateRoutes><RequestMovies /></PrivateRoutes>
             }
         ]
     }

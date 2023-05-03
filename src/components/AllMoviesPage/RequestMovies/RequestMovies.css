@@ -1,0 +1,89 @@
+.request-section{
+    background-color: #0B0F29;
+    padding: 30px;
+    margin: 50px;
+    border: 1px solid #ffffff7a;
+    border-radius: 5px;
+}
+.request-section h1{
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.request-section .flex-column{
+    display: flex;
+    padding-bottom: 25px;
+}
+.request-section .flex-column p{
+    font-size: 18px;
+    color: #4b5563;
+    margin-bottom: 8px;
+}
+.request-section .flex-column .first-section{
+    width: 48%;
+}
+.request-section .flex-column .second-section{
+    width: 48%;
+    margin-left: 4%;
+}
+.request-section .flex-column input {
+    background: #080A1A;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #ffffff7a;
+    border-radius: 5px;
+}
+.request-section textarea{
+    width: 100%;
+    height: 200px;
+    background: #080A1A;
+    border: 1px solid #ffffff7a;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    padding: 15px;
+}
+.request-section p{
+    font-size: 18px;
+    color: #4b5563;
+    margin-bottom: 8px;
+}
+.request-section .flex-column select {
+    background: #080A1A;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #ffffff7a;
+    border-radius: 5px;
+}
+.request-section .submit-btn {
+    background: red;
+    color: white;
+    width: 100%;
+    padding: 12px 0px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 2px solid red;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.request-section .submit-btn:hover{
+    background-color: transparent;
+    border: 2px solid red;
+}
+
+@media screen and (max-width: 767px) {
+    .request-section .flex-column{
+        display: block;
+    }
+    .request-section .flex-column .first-section{
+        width: 100%;
+    }
+    .request-section .flex-column .second-section{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+    .request-section{
+        margin: 50px 0;
+    }
+}

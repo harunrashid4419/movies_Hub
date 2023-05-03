@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../UserContext/UserContext";
 import { toast } from "react-hot-toast";
@@ -31,13 +31,15 @@ const Navbar = () => {
       >
         Movies
       </NavLink>
-      <NavLink
+      {
+        user && <NavLink
         style={{ textDecoration: "none" }}
         className={({ isActive }) => (isActive ? "text-red-500" : "underline")}
-        to="/a"
+        to="/movieRequest"
       >
         Request Movie
       </NavLink>
+      }
       {!user ? (
         <NavLink
           style={{ textDecoration: "none" }}
