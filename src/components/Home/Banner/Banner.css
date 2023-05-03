@@ -1,7 +1,6 @@
 .movies_banner img{
     width: 100%;
     height: 400px;
-    position: relative;
 }
 .movies_banner .content{
     position: absolute;

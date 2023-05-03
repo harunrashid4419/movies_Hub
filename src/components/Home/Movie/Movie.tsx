@@ -14,14 +14,16 @@ type UserProps = {
     print: string;
     language: string;
     plot: string;
+    imdb: number;
   };
 };
 const Movie = ({ movie }: UserProps) => {
-  const { poster, name, _id } = movie;
+  const { poster, name, _id, imdb } = movie;
   return (
     <Link to={`../movie/${_id}`}>
       <div className="single-movie">
         <img className="popularMovie-img" src={poster} alt="movie-poster" />
+        <p className="imdb-rating">IMDB Rating: {imdb}</p>
         <div className="flex-content">
           <div className="content">
             <h3>{name}</h3>

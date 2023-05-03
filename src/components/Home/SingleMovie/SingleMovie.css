@@ -77,20 +77,20 @@
     color: #c0c0c0;
     margin: 0 35px;
 }
-.movie_details .details-content .other .button {
+.movie_details .details-content .other .trailer {
+    border: 2px solid red;
     display: flex;
     align-items: center;
-    border: 1px solid red;
+    padding: 10px 45px;
+    border-radius: 25px;
     color: white;
-    border-radius: 26px;
-    padding: 9px 40px;
+    cursor: pointer;
     transition: .5s;
 }
-.movie_details .details-content .other .button:hover{
+.movie_details .details-content .other .trailer:hover{
     background-color: red;
 }
-.movie_details .details-content .other .button svg{
-    color: white;
+.movie_details .details-content .other .trailer svg{
     margin-right: 10px;
 }
 .movie_details .details-content .download-btn {
@@ -139,7 +139,7 @@
         font-size: 16px;
         margin: 0 13px;
     }
-    .movie_details .details-content .other .button {
+    .movie_details .details-content .other .trailer {
         padding: 9px 25px;
     }
     .movie_details .details-content h1 {

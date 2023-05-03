@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay } from "swiper";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import "./TopRated.css";
@@ -18,31 +18,33 @@ const TopRated = () => {
   return (
     <div className="container">
       <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
         autoplay={{
-          delay: 3000,
+          delay: 1000,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
         loop={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        speed={1000}
+        modules={[Autoplay]}
         breakpoints={{
-          640: {
-            slidesPerView: 2,
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          400: {
+            slidesPerView: 1,
             spaceBetween: 20,
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 20,
           },
           1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          1080: {
             slidesPerView: 5,
-            spaceBetween: 50,
+            spaceBetween: 20,
           },
         }}
       >
@@ -50,22 +52,19 @@ const TopRated = () => {
           {movies.map((movie: any) => (
             <SwiperSlide>
               <Link to={`../movie/${movie._id}`}>
-                <div className="top-rated-movie">
-                  <img
-                    className="popularMovie-img"
-                    src={movie.poster}
-                    alt="movie-poster"
-                  />
-                  <div className="flex-content">
-                    <div className="content">
-                      <h3>{movie.name}</h3>
-                      <button>
-                        <FaHeart />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+      <div className="single-movie">
+        <img className="popularMovie-img" src={movie.poster} alt="movie-poster" />
+        <p className="imdb-rating">IMDB Rating: {movie.imdb}</p>
+        <div className="flex-content">
+          <div className="content">
+            <h3>{movie.name}</h3>
+            <button>
+              <FaHeart />
+            </button>
+          </div>
+        </div>
+      </div>
+    </Link>
             </SwiperSlide>
           ))}
         </div>

@@ -1,22 +1,53 @@
 .single-movie {
     position: relative;
 }
-.single-movie .popularMovie-img {
+.single-movie::after {
+    content: '';
+    background: #00000085;
+    height: 100%;
     width: 100%;
-    border: 1px solid #ffffff47;
-    padding: 5px;
-    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
     transition: .5s;
 }
-.single-movie .popularMovie-img:hover{
-    transform: scale(1.03);
+.single-movie:hover:after{
+    opacity: 1;
+}
+.single-movie .popularMovie-img {
+    width: 100%;
+    border: 1px solid #ffffff52;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
+    transition: .5s;
+}
+.single-movie .imdb-rating {
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 9;
+    background: black;
+    padding: 5px 8px;
+    font-weight: bold;
+    text-align: center;
+    transition: .5s ease-in-out
+}
+.single-movie:hover .imdb-rating{
+    opacity: 1;
 }
 .single-movie .flex-content {
-	position: absolute;
-	width: 96%;
-	bottom: 1%;
-	left: 50%;
-	transform: translate(-50%, -1%);
+    position: absolute;
+    width: 96%;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, -1%);
+    z-index: 9;
 }
 .single-movie .content {
     display: flex;

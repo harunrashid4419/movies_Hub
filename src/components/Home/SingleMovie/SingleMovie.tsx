@@ -5,6 +5,8 @@ import { FaCalendarAlt, FaPlay, FaShareAlt, FaStopwatch } from "react-icons/fa";
 import { BiDownload } from "react-icons/bi";
 import MovieReview from "../MovieReview/MovieReview";
 import Cast from "../Cast/Cast";
+import Share from "../../Modal/Share/Share";
+import Trailer from "../../Modal/Trailer/Trailer";
 
 const SingleMovie = () => {
   const movie: any = useLoaderData();
@@ -40,11 +42,17 @@ const SingleMovie = () => {
           </div>
           <p className="plot">{plot}</p>
           <div className="other">
-            <FaShareAlt className="share" />
+            <label htmlFor="share-modal">
+              <FaShareAlt className="share" />
+            </label>
+            <Share name={name} />
             <p className="language">Language: {language}</p>
-            <button className="button">
-              <FaPlay /> Watch
-            </button>
+            <label htmlFor="trailer-modal">
+              <div className="trailer">
+                <FaPlay /> Watch
+              </div>
+            </label>
+            <Trailer />
           </div>
           <a
             target="_blank"
