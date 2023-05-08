@@ -9,8 +9,9 @@ import "./TopRated.css";
 
 const TopRated = () => {
   const [movies, setMovies] = useState([]);
+
   useEffect(() => {
-    const url = "https://movie-hub-server.vercel.app/movies";
+    const url = "https://movie-hub-server.vercel.app/topRated";
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMovies(data));
@@ -52,9 +53,9 @@ const TopRated = () => {
         }}
       >
         <div>
-          {movies.map((movie: any) => (
-            <SwiperSlide>
-              <Link to={`../movie/${movie._id}`}>
+          {movies?.map((movie: any) => (
+            <SwiperSlide key={movie._id}>
+              <Link to={`../topRated/${movie._id}`}>
                 <div className="single-movie">
                   <img
                     className="popularMovie-img"

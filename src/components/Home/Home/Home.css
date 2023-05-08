@@ -15,3 +15,22 @@
     color: beige;
     margin-top: 5px;
 }
+.empty-movie{
+    font-style: italic;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+.empty-movie a{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    text-decoration: underline;
+}
+@media screen and (max-width: 767px) {
+    .empty-movie{
+        font-size: 16px;
+    }
+    .empty-movie a{
+        font-size: 17px;
+    }
+}

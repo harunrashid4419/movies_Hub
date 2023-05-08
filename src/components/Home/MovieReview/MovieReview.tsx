@@ -11,7 +11,7 @@ const MovieReview = ({ name, _id }: any) => {
   const { data: userReview = [], refetch } = useQuery({
     queryKey: ["reviews"],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:5000/reviews/${_id}`);
+      const res = await fetch(`https://movie-hub-server.vercel.app/reviews/${_id}`);
       const data = res.json();
       return data;
     },

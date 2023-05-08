@@ -1,19 +1,17 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
-import "./SingleMovie.css";
 import { FaCalendarAlt, FaPlay, FaShareAlt, FaStopwatch } from "react-icons/fa";
-import { BiDownload } from "react-icons/bi";
-import MovieReview from "../MovieReview/MovieReview";
-import Cast from "../Cast/Cast";
+import { useLoaderData } from "react-router-dom";
 import Share from "../../Modal/Share/Share";
 import Trailer from "../../Modal/Trailer/Trailer";
+import { BiDownload } from "react-icons/bi";
+import Cast from "../Cast/Cast";
+import MovieReview from "../MovieReview/MovieReview";
 
-const SingleMovie = () => {
+const TopRatedSingle = () => {
   const movie: any = useLoaderData();
   const { name, poster, year, genra, language, length, plot, print, _id } =
     movie;
-    
-    return (
+  return (
     <div
       // style={{
       //   opacity: "100%",
@@ -71,4 +69,4 @@ const SingleMovie = () => {
   );
 };
 
-export default SingleMovie;
+export default TopRatedSingle;

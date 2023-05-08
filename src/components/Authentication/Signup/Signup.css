@@ -80,6 +80,15 @@
     padding-bottom: 20px;
     cursor: pointer;
 }
+#passowrd-field{
+    position: relative;
+}
+#password-eye {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translate(-2%, -50%);
+}
 @media screen and (max-width: 767px) {
     .singup-section{
         width: 100%;

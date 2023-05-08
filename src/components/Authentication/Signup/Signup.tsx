@@ -1,13 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Signup.css";
 import { BiDownload } from "react-icons/bi";
 import { AuthContext } from "../../../UserContext/UserContext";
 import { toast } from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Signup = () => {
   const { createUser, profileUpdated }: any = useContext(AuthContext);
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -41,7 +43,7 @@ const Signup = () => {
 
   const userAddToDatabase = (name: string, email: string) => {
     const userInfo = { name, email };
-    fetch("http://localhost:5000/users", {
+    fetch("https://movie-hub-server.vercel.app/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -79,15 +81,18 @@ const Signup = () => {
               required
             />
           </div>
-          <div className="input-type">
+          <div id='passowrd-field' className="input-type">
             <span className="label-text">Password</span>
             <br />
             <input
-              type="password"
+              type={open ? 'text': 'password'}
               name="password"
               placeholder="*******"
               required
             />
+            <div id='password-eye' onClick={() => setOpen(!open)}>
+              {open ? <FaEye /> : <FaEyeSlash />}
+            </div>
           </div>
           <button>
             <BiDownload className="icon" /> Sign Up

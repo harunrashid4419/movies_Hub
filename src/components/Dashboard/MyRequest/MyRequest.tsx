@@ -9,7 +9,7 @@ const MyRequest = () => {
     queryKey: ["my-request"],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:5000/myRequest?email=${user?.email}`
+        `https://movie-hub-server.vercel.app/myRequest?email=${user?.email}`
       );
       const data = res.json();
       return data;

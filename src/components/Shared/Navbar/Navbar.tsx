@@ -32,6 +32,20 @@ const Navbar = () => {
       >
         Movies
       </NavLink>
+      <NavLink
+        style={{ textDecoration: "none" }}
+        className={({ isActive }) => (isActive ? "text-red-500" : "undefined")}
+        to="/about"
+      >
+        About Us
+      </NavLink>
+      <NavLink
+        style={{ textDecoration: "none" }}
+        className={({ isActive }) => (isActive ? "text-red-500" : "undefined")}
+        to="/contact"
+      >
+        Contact Us
+      </NavLink>
       {user && (
         <NavLink
           style={{ textDecoration: "none" }}

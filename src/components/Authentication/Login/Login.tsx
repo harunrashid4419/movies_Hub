@@ -3,6 +3,7 @@ import { BiDownload } from "react-icons/bi";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../UserContext/UserContext";
 import { toast } from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const { login, user }: any = useContext(AuthContext);
@@ -10,6 +11,7 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
+  const [open, setOpen] = useState(false);
 
   const handleLogin = (e: any) => {
     e.preventDefault();
@@ -51,15 +53,18 @@ const Login = () => {
               required
             />
           </div>
-          <div className="input-type">
+          <div id='passowrd-field' className="input-type">
             <span className="label-text">Password</span>
             <br />
             <input
-              type="password"
+              type={open ? 'text': 'password'}
               name="password"
               placeholder="*******"
               required
             />
+            <div id='password-eye' onClick={() => setOpen(!open)}>
+              {open ? <FaEye /> : <FaEyeSlash />}
+            </div>
           </div>
           {error && <h4 className="text-red-500">{error}</h4>}
           <h5 className="forget-pass">Forget Password?</h5>
