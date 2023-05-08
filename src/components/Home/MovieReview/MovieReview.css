@@ -101,7 +101,10 @@
     color: #c0c0c0;
     padding-left: 30px;
 }
-
+.no-review{
+    font-size: 32px;
+    margin-top: 20px;
+}
 @media screen and (max-width: 1024px) {
     .movie_review .review-section {
         display: block;

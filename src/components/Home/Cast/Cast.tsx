@@ -2,7 +2,7 @@ import React from "react";
 import { FaUsers } from "react-icons/fa";
 import "./Cast.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
 
 const Cast = ({ movie }: any) => {
   const { casts } = movie;
@@ -14,13 +14,16 @@ const Cast = ({ movie }: any) => {
       </h1>
       <div className="cast-sections">
         <Swiper
+          spaceBetween={30}
           autoplay={{
-            delay: 1000,
+            delay: 2000,
             disableOnInteraction: false,
           }}
-          loop={true}
-          speed={1000}
-          modules={[Autoplay]}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
           breakpoints={{
             0: {
               slidesPerView: 1,

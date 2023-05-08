@@ -20,14 +20,14 @@ const Signup = () => {
       .then((result: any) => {
         const user = result.user;
         console.log(user);
-
+        userAddToDatabase(name, email);
         // update profile name
         const profileName = {
           displayName: name,
         };
         profileUpdated(profileName)
-        .then((resuls: any) => {
-            console.log(profileName)
+          .then((resuls: any) => {
+            console.log(profileName);
             toast.success("SignUp sucessfull");
             navigate("/");
             console.log(resuls);
@@ -38,6 +38,22 @@ const Signup = () => {
         console.error(error);
       });
   };
+
+  const userAddToDatabase = (name: string, email: string) => {
+    const userInfo = { name, email };
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userInfo),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
+
   return (
     <div className="container">
       <div className="singup-section">

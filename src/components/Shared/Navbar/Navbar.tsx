@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../UserContext/UserContext";
 import { toast } from "react-hot-toast";
+import { FaAlignRight } from "react-icons/fa";
 
 const Navbar = () => {
   const { user, logOut }: any = useContext(AuthContext);
@@ -14,37 +15,50 @@ const Navbar = () => {
       })
       .catch(() => {});
   };
-  
+
   const menu = (
     <li>
       <NavLink
         style={{ textDecoration: "none" }}
-        className={({ isActive }) => (isActive ? "text-red-500" : "underline")}
+        className={({ isActive }) => (isActive ? "text-red-500" : "undefined")}
         to="/"
       >
         Home
       </NavLink>
       <NavLink
         style={{ textDecoration: "none" }}
-        className={({ isActive }) => (isActive ? "text-red-500" : "underline")}
+        className={({ isActive }) => (isActive ? "text-red-500" : "undefined")}
         to="/movies"
       >
         Movies
       </NavLink>
-      {
-        user && <NavLink
-        style={{ textDecoration: "none" }}
-        className={({ isActive }) => (isActive ? "text-red-500" : "underline")}
-        to="/movieRequest"
-      >
-        Request Movie
-      </NavLink>
-      }
+      {user && (
+        <NavLink
+          style={{ textDecoration: "none" }}
+          className={({ isActive }) =>
+            isActive ? "text-red-500" : "undefined"
+          }
+          to="/movieRequest"
+        >
+          Request Movie
+        </NavLink>
+      )}
+      {user && (
+        <NavLink
+          style={{ textDecoration: "none" }}
+          className={({ isActive }) =>
+            isActive ? "text-red-500" : "undefined"
+          }
+          to="/dashboard"
+        >
+          Dashboard
+        </NavLink>
+      )}
       {!user ? (
         <NavLink
           style={{ textDecoration: "none" }}
           className={({ isActive }) =>
-            isActive ? "text-red-500" : "underline"
+            isActive ? "text-red-500" : "undefined"
           }
           to="/login"
         >
@@ -90,6 +104,12 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{menu}</ul>
         </div>
+        <label
+          htmlFor="dashboard-drawer"
+          className="btn btn-primary drawer-button lg:hidden bg-transparent border-none"
+        >
+          <FaAlignRight />
+        </label>
       </div>
     </div>
   );

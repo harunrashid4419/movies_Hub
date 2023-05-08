@@ -36,8 +36,8 @@
 .socket{
     color: #E0D5D5;
     text-align: center;
-    padding-bottom: 15px;
-    background-color: black;
+    padding: 15px 0;
+    background-color: #151A2F;
 }
 @media screen and (max-width: 767px) {
     .footer-section{

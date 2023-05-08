@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import "./TopRated.css";
@@ -18,13 +18,16 @@ const TopRated = () => {
   return (
     <div className="container">
       <Swiper
+        spaceBetween={30}
         autoplay={{
-          delay: 1000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
-        loop={true}
-        speed={1000}
-        modules={[Autoplay]}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
         breakpoints={{
           0: {
             slidesPerView: 1,
@@ -52,19 +55,23 @@ const TopRated = () => {
           {movies.map((movie: any) => (
             <SwiperSlide>
               <Link to={`../movie/${movie._id}`}>
-      <div className="single-movie">
-        <img className="popularMovie-img" src={movie.poster} alt="movie-poster" />
-        <p className="imdb-rating">IMDB Rating: {movie.imdb}</p>
-        <div className="flex-content">
-          <div className="content">
-            <h3>{movie.name}</h3>
-            <button>
-              <FaHeart />
-            </button>
-          </div>
-        </div>
-      </div>
-    </Link>
+                <div className="single-movie">
+                  <img
+                    className="popularMovie-img"
+                    src={movie.poster}
+                    alt="movie-poster"
+                  />
+                  <p className="imdb-rating">IMDB: {movie.imdb}</p>
+                  <div className="flex-content">
+                    <div className="content">
+                      <h3>{movie.name}</h3>
+                      <button>
+                        <FaHeart />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </SwiperSlide>
           ))}
         </div>
