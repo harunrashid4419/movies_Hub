@@ -50,7 +50,7 @@ const Banner = () => {
         className="mySwiper"
       >
         {movies.map((movie) => (
-          <SwiperSlide>
+          <SwiperSlide key={movie.id}>
             <img src={movie.poster} alt="movies-img" />
             <div className="content">
               <h1>{movie.name}</h1>

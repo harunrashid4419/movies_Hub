@@ -15,7 +15,6 @@ const Users = () => {
               <th>SL.</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Action</th>
             </tr>
           </thead>
           {users.map((user: any, i: number) => (
@@ -24,16 +23,6 @@ const Users = () => {
                 <th>{i + 1}</th>
                 <td>{user?.name}</td>
                 <td>{user?.email}</td>
-                <td
-                  style={{
-                    cursor: "pointer",
-                    display: "flex",
-                    justifyContent: "start",
-                    backgroundColor: 'transparent'
-                  }}
-                >
-                  <AiFillDelete />
-                </td>
               </tr>
             </tbody>
           ))}

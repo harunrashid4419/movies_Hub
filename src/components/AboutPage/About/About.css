@@ -33,6 +33,10 @@
     background-color: #0B0F29;
     padding: 30px;
     border-radius: 5px;
+    transition: .5s;
+}
+.main-about .users .flex-column:hover{
+    background-color: hsla(0, 0%, 50%, 0.247);
 }
 .main-about .users .flex-column:last-child{
     margin-left: 30px;
