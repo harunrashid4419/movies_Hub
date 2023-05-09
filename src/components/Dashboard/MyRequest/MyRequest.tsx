@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { AuthContext } from "../../../UserContext/UserContext";
 import { AiFillDelete } from "react-icons/ai";
 import { toast } from "react-hot-toast";
