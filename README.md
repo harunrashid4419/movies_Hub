@@ -1,7 +1,7 @@
 ### Project Name: moviesHub (a movie streaming platform)
 ### Live Link: https://hd-movies-hub.netlify.app/
 
-#### Technologies:
+## Technologies:
 - React JS
 - TypeScript
 - Express JS
