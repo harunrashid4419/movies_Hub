@@ -10,7 +10,7 @@
 - Daisy UI
 - HTML-5
 - CSS-3
- First list item
+ ## Dependency:
      - First nested list item
 ## Projects overview:
 - Users can download his/her favorite movies and comment on any movies if he/she wants.
