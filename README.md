@@ -11,7 +11,13 @@
 - HTML-5
 - CSS-3
  ## Dependency:
-     - First nested list item
+ - Firebase
+ - React Router Dom
+ - React Rating Star
+ - React Hot Toast
+ - React Icon
+ - Swiper JS
+ - React Query
 ## Projects overview:
 - Users can download his/her favorite movies and comment on any movies if he/she wants.
 - When users hover over the poster image, User can see the beautiful effect on the images.
