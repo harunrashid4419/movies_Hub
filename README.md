@@ -2,4 +2,4 @@
 ### Live Link: https://hd-movies-hub.netlify.app/
 
 #### Technologies:
-- React JS
+                  - React JS
