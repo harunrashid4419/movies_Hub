@@ -1,53 +1,40 @@
-.footer{
-    background-color: black;
-
+.main-footer{
+    background-color: #151A2F;
 }
 .footer-section{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding-top: 60px;
-    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
 }
-.footer-section .flex-column h1{
-    font-size: 32px;
-    color: green;
-    font-weight: bold;
-    margin-bottom: 30px;
+.footer-section .right{
+    display: flex;
 }
-.footer-section .flex-column a{
-    display: block;
-    color: #ffffff85;
-    margin-bottom: 8px;
-    width: fit-content;
+.footer-section .right svg {
+    font-size: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
     transition: .5s;
 }
-.footer-section .flex-column a:hover{
-    color: red;
+.footer-section .right svg:hover{
+    background-color: white;
+    color: black;
 }
-.footer-section .flex-column p{
-    color: #ffffff85;
-    margin-bottom: 8px;
+.footer-section .right a{
+    margin-right: 15px;
 }
-.footer-section .flex-column span{
-    font-weight: bold;
-    color: #E0D5D5;
-}
-.socket{
-    color: #E0D5D5;
-    text-align: center;
-    padding: 15px 0;
-    background-color: #151A2F;
+.footer-section .right a:last-child{
+    margin-right: 0;
 }
 @media screen and (max-width: 767px) {
     .footer-section{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        display: block;
     }
-}
-@media screen and (max-width: 576px) {
-    .footer-section{
-        grid-template-columns: repeat(1, 1fr);
-        gap: 30px;
+    .footer-section .right{
+        display: flex;
+        justify-content: end;
+        padding-top: 20px;
     }
 }

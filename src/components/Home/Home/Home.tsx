@@ -6,11 +6,18 @@ import { MdLocalMovies } from "react-icons/md";
 import "./Home.css";
 import MobileOffline from "../MobileOffline/MobileOffline";
 import { Link } from "react-router-dom";
+import Frequently from "../Frequently/Frequently";
+import Cart from "../Cart/Cart";
+import Trial from "../Trial/Trial";
+import Details from "../Details/Details";
+import Content from "../Content/Content";
+import Series from "../Series/Series";
 
 const Home = () => {
   return (
     <div>
       <Banner />
+      <Content />
       <div className="movies-top-rated container">
         <MdLocalMovies />
         <h1>Top Rated Movies</h1>
@@ -22,7 +29,12 @@ const Home = () => {
         now send a request for that movie to the admin. {""}
         <Link to="/movieRequest">Go to request page</Link>
       </p>
+      <Series />
       <MobileOffline />
+      <Frequently />
+      <Cart />
+      <Trial />
+      <Details />
     </div>
   );
 };

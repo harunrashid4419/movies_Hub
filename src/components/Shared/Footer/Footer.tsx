@@ -1,41 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Footer.css";
+import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <>
-      <div className="footer">
-        <div className="container footer-section">
-          <div className="flex-column">
-            <h1>Company</h1>
-            <Link to="">Home</Link>
-            <Link to="">Movies</Link>
-            <Link to="">Request Movie</Link>
+    <div className="main-footer">
+      <div className="container">
+        <div className="footer-section">
+          <div className="left">
+            <p>Copyright © 2023 - All right reserved by MoviesHub</p>
           </div>
-          <div className="flex-column">
-            <h1>Category</h1>
-            <Link to="">Action</Link>
-            <Link to="">Comedy</Link>
-            <Link to="">Drama</Link>
-            <Link to="">Romance</Link>
-          </div>
-          <div className="flex-column">
-            <h1>MoviesHub</h1>
-            <p>Road 52, Mirpur, Dhaka, Bangladesh</p>
-            <p>
-              <span>Phone:</span> +880745454554
-            </p>
-            <p>
-              <span>Email:</span> movies.hub@gmail.com
-            </p>
+          <div className="right">
+            <a href="https://www.facebook.com" target="_black">
+              <FaFacebookF />
+            </a>
+            <a href="https://wwwtwitter.com" target="_black">
+              <FaTwitter />
+            </a>
+            <a href="https://www.youtube.com" target="_black">
+              <FaYoutube />
+            </a>
+            <a href="https://www.instagram.com" target="_black">
+              <FaInstagram />
+            </a>
           </div>
         </div>
       </div>
-      <p className="socket">
-        Copyright © 2023 - All right reserved by MoviesHub
-      </p>
-    </>
+    </div>
   );
 };
 

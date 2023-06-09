@@ -1,0 +1,114 @@
+.main-cart{
+    background-color: #151A2F;
+    padding: 50px 0;
+    text-align: center;
+}
+.main-cart h2{
+    font-size: 32px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+.main-cart p{
+    font-size: 16px;
+    font-weight: bold;
+}
+.main-cart .cart-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+.main-cart .single-cart{
+    background-color: white;
+    padding: 30px;
+    height: fit-content;
+}
+.main-cart .single-cart img{
+    width: 60px;
+    margin: 0 auto;
+}
+.main-cart .single-cart p{
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin-top: 10px;
+}
+.main-cart .single-cart h1{
+    font-size: 56px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-cart .single-cart .dolar{
+    font-size: 24px;
+    font-weight: normal;
+}
+.main-cart .single-cart .month{
+    margin-top: 0;
+    margin-top: -15px;
+    font-size: 16px;
+}
+.main-cart .single-cart .save {
+    background: #FDE5E5;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0px 30px;
+    border-radius: 11px;
+    color: red;
+    margin-top: 10px;
+}
+.main-cart .single-cart .extra-price, 
+.main-cart .single-cart .extra-price span{
+    font-size: 18px;
+    color: black;
+}
+.main-cart .single-cart button {
+    background: red;
+    width: 100%;
+    padding: 13px 0;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 20px;
+    border: 2px solid red;
+    font-size: 18px;
+    transition: .6s ease-in-out;
+}
+.main-cart .single-cart button:hover{
+    border: 2px solid red;
+    background-color: transparent;
+    color: black;
+}
+.main-cart .single-cart .protection{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.main-cart .single-cart .protection img{
+    width: 15px;
+    height: 15px;
+    margin: 7px 5px 0 0;
+}
+.main-cart .single-cart .protection p{
+    font-size: 18px;
+    font-weight: 600;
+    color: #00000085;
+    margin-top: 0px;
+    text-align: left;
+}
+@media screen and (max-width: 992px) {
+    .main-cart .cart-section{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .main-cart{
+        padding: 50px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .main-cart .cart-section{
+        gap: 30px;
+    }
+    .main-cart{
+        padding: 50px 0;
+    }
+}
